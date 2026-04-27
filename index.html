@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Breath of Fire (1993) Strategy Guide + Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-mode="guide">
+  <div class="app-shell">
+    <aside class="sidebar">
+      <h1>Breath of Fire<br /><span>SNES Strategy Hub</span></h1>
+      <p class="sub">Comprehensive Guide Mode + 100% Tracker Mode.</p>
+
+      <div class="mode-switch">
+        <p class="label mode-label" id="currentModeLabel">Guide Mode</p>
+        <button id="modeToggle" type="button" class="mode-btn">Show Tracker</button>
+      </div>
+
+      <div class="theme-switch">
+        <p class="label theme-label" id="currentThemeLabel">Light Mode</p>
+        <button id="themeToggle" type="button" class="theme-btn">🌙 Dark</button>
+      </div>
+
+      <label for="searchInput" class="label">Search Current Mode</label>
+      <input id="searchInput" type="search" placeholder="Type chapter, boss, item, character..." />
+
+      <nav class="nav-links" aria-label="Section navigation">
+        <a href="#guide-overview" data-nav-type="guide">Guide: Game Overview</a>
+        <a href="#guide-beginner" data-nav-type="guide">Guide: Beginner Deep Dive</a>
+        <a href="#guide-walkthrough" data-nav-type="guide">Guide: Full Walkthrough</a>
+        <a href="#guide-characters" data-nav-type="guide">Guide: Character Breakdown</a>
+        <a href="#guide-dragons" data-nav-type="guide">Guide: Dragon System</a>
+        <a href="#guide-equipment" data-nav-type="guide">Guide: Equipment Optimization</a>
+        <a href="#guide-exp-zones" data-nav-type="guide">Guide: EXP Leveling Zones</a>
+        <a href="#guide-bosses" data-nav-type="guide">Guide: Boss Compendium</a>
+        <a href="#guide-secrets" data-nav-type="guide">Guide: Secrets Optional</a>
+        <a href="#guide-endgame" data-nav-type="guide">Guide: Endgame</a>
+        <a href="#guide-completion" data-nav-type="guide">Guide: 100% Route</a>
+        <a href="#tracker-dashboard" data-nav-type="tracker">Tracker: Dashboard</a>
+        <a href="#tracker-story" data-nav-type="tracker">Tracker: Main Story</a>
+        <a href="#tracker-bosses" data-nav-type="tracker">Tracker: Bosses</a>
+        <a href="#tracker-characters" data-nav-type="tracker">Tracker: Characters</a>
+        <a href="#tracker-items" data-nav-type="tracker">Tracker: Items</a>
+        <a href="#tracker-secrets" data-nav-type="tracker">Tracker: Secrets</a>
+        <a href="#tracker-dragons" data-nav-type="tracker">Tracker: Dragon Forms</a>
+      </nav>
+
+      <div class="sidebar-actions">
+        <button id="expandAll" type="button">Expand All Segments</button>
+        <button id="collapseAll" type="button">Collapse All Segments</button>
+        <button id="resetProgress" class="danger" type="button">Reset Tracker Progress</button>
+      </div>
+    </aside>
+
+    <main class="content">
+      <div id="guideMode" class="mode-view active" data-mode-view="guide">
+        <section id="guide-overview" class="panel guide-card" data-search-item>
+          <h2>1) Game Overview</h2>
+          <h3>Spoiler-Free Introduction</h3>
+          <p>Breath of Fire follows Ryu, a member of the Light Dragon clan, as he uncovers why the Dark Dragon Empire is conquering the world and reviving forbidden power. The game mixes classic turn-based combat with map exploration, recruitable party members, character-specific field skills, and dragon transformations that act as high-impact battle tools.</p>
+          <h3>Full Narrative Breakdown</h3>
+          <p>The opening conflict begins when Ryu's village is destroyed and his sister is taken by the Dark Dragons. Early arcs revolve around rescuing local kingdoms and proving that scattered disasters are connected. Midgame pivots into gathering keys, ancient knowledge, and specialized allies like Karn, Gobi, Ox, Bleu, and Mogu. Late game reveals the empire's true objective: awakening the goddess to remake the world through domination. The final route through Scande, Pagoda, and Obelisk culminates in confrontations with Zog, Jade, and the final divine form.</p>
+          <h3>World Structure and Progression Flow</h3>
+          <ul>
+            <li>Phase A: Drogen to Camlon, Nanai, Winlan and Romero arcs to establish core mechanics.</li>
+            <li>Phase B: Forest/Fortress and Agua chain to unlock broader progression tools.</li>
+            <li>Phase C: Auria-Arad-Krypt and sea routes expand traversal and party specialization.</li>
+            <li>Phase D: Fusion-centric midgame and recruitment windows (Karn, Bleu, Mogu).</li>
+            <li>Phase E: Dragon shrine mastery, final key sequence, and endgame boss chain.</li>
+          </ul>
+          <h3>Core Mechanics Explained</h3>
+          <ul>
+            <li>Combat economy: AP is your limited burst resource, while Herbs and revival stock manage attrition.</li>
+            <li>Exploration skills: character actions (breaking, fishing, digging, terrain interaction) gate optional rewards.</li>
+            <li>Encounter control: safer routes use short, repeatable loops near inns to reduce wipe risk.</li>
+            <li>Damage planning: physical consistency beats reckless spell spam until AP restoration improves.</li>
+          </ul>
+        </section>
+
+        <section id="guide-beginner" class="panel guide-card" data-search-item>
+          <h2>2) Beginner Deep Dive</h2>
+          <h3>First 2-3 Hours Survival Plan</h3>
+          <ol>
+            <li>Buy baseline healing before leaving starter zones: treat 10 Herbs as a minimum, not a luxury.</li>
+            <li>Use defensive rhythm for unknown enemy groups: heal early rather than gambling on low HP turns.</li>
+            <li>Always clear immediate side chests before story triggers to avoid backtracking waste.</li>
+            <li>Store extra zenny when a dungeon push is uncertain so wipes do not erase all momentum.</li>
+          </ol>
+          <h3>When and Where to Grind Efficiently</h3>
+          <ul>
+            <li>Early window: Camlon loops until your party can survive 3 consecutive encounters without panic healing.</li>
+            <li>Mid-early window: Romero/Karma side routes for stable EXP while collecting utility pickups.</li>
+            <li>Midgame window: Krypt and adjacent routes when preparing Karn-driven progression spikes.</li>
+          </ul>
+          <h3>Resource and Zenny Management</h3>
+          <ul>
+            <li>Prioritize survivability purchases over marginal attack upgrades.</li>
+            <li>Keep one emergency revive and one AP sustain item in reserve before each major boss.</li>
+            <li>Avoid impulse equipment replacements if a guaranteed upgrade arrives in the next dungeon.</li>
+          </ul>
+          <h3>Common Beginner Mistakes</h3>
+          <ul>
+            <li>Overcommitting AP early and entering boss phase changes empty.</li>
+            <li>Ignoring hidden interactables (trees, walls, wells) that provide economy-saving items.</li>
+            <li>Using fragile party members in front row, creating preventable wipe chains.</li>
+            <li>Skipping post-unlock revisits where the strongest midgame gear is hidden.</li>
+          </ul>
+        </section>
+
+        <section id="guide-walkthrough" class="panel guide-card" data-search-item>
+          <h2>3) Full Walkthrough (Highly Detailed)</h2>
+          <p class="hint">Each segment lists objective flow, NPC priorities, dungeon routing, enemy handling, boss tactics, and missables.</p>
+
+          <details class="segment" open>
+            <summary>Chapter 1: Drogen to Camlon</summary>
+            <ul>
+              <li>Objectives: stabilize gear, clear Camlon threats, defeat Frog, confirm healing cadence.</li>
+              <li>Key NPCs: early shopkeeper for Herbs economy, Camlon residents for route cues.</li>
+              <li>Dungeon guidance: clear side rooms first, then center lane to prevent re-fights while low.</li>
+              <li>Enemy approach: focus fire low-HP casters, preserve AP, heal above one-hit thresholds.</li>
+              <li>Boss prep: stock 8-10 Herbs, keep steady single-target damage, heal on turn breakpoints.</li>
+              <li>Missables: first-house hidden pickup in Drogen before major travel chain.</li>
+            </ul>
+          </details>
+
+          <details class="segment">
+            <summary>Chapter 2: Nanai Infiltration and Escape</summary>
+            <ul>
+              <li>Objectives: enter Nanai at correct story timing, complete infiltration, defeat Knight, exit safely.</li>
+              <li>Key NPCs: rumor NPCs that confirm nighttime trigger and escape warning.</li>
+              <li>Dungeon guidance: map intersections mentally; right-side checks first reduce dead-end traversal.</li>
+              <li>Enemy approach: poison-prone battles require antidote discipline; do not enter boss room chipped down.</li>
+              <li>Boss prep: turn one defense or heal if needed; maintain safe HP and close with controlled damage.</li>
+              <li>Missables: purchase any Nanai-limited upgrades before progression lockout.</li>
+            </ul>
+          </details>
+
+          <details class="segment">
+            <summary>Chapter 3: Winlan, Romero, Karma Tower Arc</summary>
+            <ul>
+              <li>Objectives: complete Aura Cave path, resolve Romero sequence, finish tower chain.</li>
+              <li>Key NPCs: map guidance NPCs in Romero and route hints near tower approach.</li>
+              <li>Dungeon guidance: collect hidden forest pickups before tower boss stack.</li>
+              <li>Enemy approach: conserve AP for back-to-back encounter pressure around tower climb.</li>
+              <li>Boss prep: distribute healing roles; target high-threat enemies first in multi-boss chains.</li>
+              <li>Missables: Rang and hidden forest utility drops before leaving chapter region.</li>
+            </ul>
+          </details>
+
+          <details class="segment">
+            <summary>Chapter 4: Tantar/Tuntar, Fortress, Agua, First Shrine</summary>
+            <ul>
+              <li>Objectives: resolve iron/saw chain, clear fortress, recruit Bo, finish Agua and shrine trial.</li>
+              <li>Key NPCs: ore exchange NPCs, fortress story triggers, shrine gate sequence.</li>
+              <li>Dungeon guidance: fortress side loops contain high-value support items.</li>
+              <li>Enemy approach: prioritize status enemies; use back row positioning for fragile casters.</li>
+              <li>Boss prep: for Talon solo trial, equip for consistency and save AP for guaranteed finish windows.</li>
+              <li>Missables: hidden W.Ant and SteelBW pathing opportunities.</li>
+            </ul>
+          </details>
+
+          <details class="segment">
+            <summary>Chapter 5: Auria-Arad-Krypt and Karn Power Spike</summary>
+            <ul>
+              <li>Objectives: secure Gold Bar trade line, clear Sand Worm and EyeSpy, recruit Karn.</li>
+              <li>Key NPCs: Auria trade chain and route NPCs that gate desert progression.</li>
+              <li>Dungeon guidance: keep a clear path log in Krypt to avoid attrition from repeated rooms.</li>
+              <li>Enemy approach: fight selectively in desert stretches; entering Krypt drained is high risk.</li>
+              <li>Boss prep: maintain revive coverage and anti-burst healing for EyeSpy turns.</li>
+              <li>Missables: immediate post-Karn revisit for LifeAR and IcyDR is a major power jump.</li>
+            </ul>
+          </details>
+
+          <details class="segment">
+            <summary>Chapter 6: Sea Arc, Gobi Route, Fusion Expansion</summary>
+            <ul>
+              <li>Objectives: clear ship route, complete Gobi solo segment, recover party, unlock Shin in Gant.</li>
+              <li>Key NPCs: conversion and progression NPCs in Prima/Gant chains.</li>
+              <li>Dungeon guidance: Sea Volcano side paths contain crucial weapon and AP-value gear.</li>
+              <li>Enemy approach: burst dangerous groups quickly when solo windows create low tolerance.</li>
+              <li>Boss prep: Morteo and related encounters reward stable AP reserve, not early overuse.</li>
+              <li>Missables: SharpBW and PowerDR pickups before leaving volcano chain.</li>
+            </ul>
+          </details>
+
+          <details class="segment">
+            <summary>Chapter 7: West Fortress, Nabal, Bleu, and Second Shrine</summary>
+            <ul>
+              <li>Objectives: defeat Toad, clear Nabal/SlimeX route, recruit Bleu, finish second shrine.</li>
+              <li>Key NPCs: Old Egg exchange chain and shrine access confirmations.</li>
+              <li>Dungeon guidance: keep inventory slots open before high-reward rooms.</li>
+              <li>Enemy approach: Nabal chains test sustain; do not arrive understocked on revive items.</li>
+              <li>Boss prep: SlimeX fight rewards focused damage windows and strict healing discipline.</li>
+              <li>Missables: Dragon Sword and related fishing setup before leaving this power tier.</li>
+            </ul>
+          </details>
+
+          <details class="segment">
+            <summary>Chapter 8: HornToad, Mogu Dream, Doof/Puka, Spyre</summary>
+            <ul>
+              <li>Objectives: finish Gust chain, recruit Mogu, unlock Doof and Puka, clear Spyre.</li>
+              <li>Key NPCs: dream and transformation trigger NPCs that gate character utility.</li>
+              <li>Dungeon guidance: sealed chambers should be chained efficiently after Puka unlock.</li>
+              <li>Enemy approach: rotating path dungeons reward deliberate movement over rushing.</li>
+              <li>Boss prep: HornToad punishes poor AP planning; keep recovery turns pre-planned.</li>
+              <li>Missables: dragon-seal chamber rewards including LoveBR, WindBR, and DarkBR lines.</li>
+            </ul>
+          </details>
+
+          <details class="segment">
+            <summary>Chapter 9: Tock Sequence, Third Shrine, Scande, Pagoda</summary>
+            <ul>
+              <li>Objectives: clear memory cure sequence, unlock flight, obtain Agni path tools, defeat Zog and Sara.</li>
+              <li>Key NPCs: sequence-critical NPCs in Cerl and shrine access zones.</li>
+              <li>Dungeon guidance: treat Scande as an attrition gauntlet; route around unnecessary loops.</li>
+              <li>Enemy approach: late-game encounters can spike hard; rotate defensive gear by zone.</li>
+              <li>Boss prep: choose D.Hrt route target before chain starts and commit loadout accordingly.</li>
+              <li>Missables: pre-final preparation windows and inventory sort before Obelisk push.</li>
+            </ul>
+          </details>
+
+          <details class="segment">
+            <summary>Chapter 10: Obelisk Final Route and Final Battle</summary>
+            <ul>
+              <li>Objectives: defeat Goda and Jade, secure final equipment pickups, clear true final chain.</li>
+              <li>Key NPCs: final prep prompts and last shop access points.</li>
+              <li>Dungeon guidance: conserve healing for mandatory boss sequence, avoid needless fights.</li>
+              <li>Enemy approach: one wipe can erase momentum; keep AP restore and revive reserves untouched.</li>
+              <li>Boss prep: verify Agni conditions before final entry; enter with staged turns in mind.</li>
+              <li>Missables: EmporSD and StarHR prior to final no-return sequence.</li>
+            </ul>
+          </details>
+        </section>
+
+        <section id="guide-characters" class="panel guide-card" data-search-item>
+          <h2>4) Character Breakdown (In-Depth)</h2>
+          <h3>Ryu</h3>
+          <p><strong>Role:</strong> consistent physical damage and dragon burst finisher. <strong>Priority:</strong> attack upgrades that do not cripple speed. <strong>Synergy:</strong> excels when Nina/Bleu maintain AP and heal tempo.</p>
+          <h3>Nina</h3>
+          <p><strong>Role:</strong> sustain backbone. <strong>Priority:</strong> survivability and AP economy over offense. <strong>Synergy:</strong> strongest in boss routes where fights exceed 6+ rounds.</p>
+          <h3>Bo</h3>
+          <p><strong>Role:</strong> early-mid physical support. <strong>Priority:</strong> stable weapon progression and safe row placement. <strong>Synergy:</strong> helps smooth transition until heavier late units join.</p>
+          <h3>Karn</h3>
+          <p><strong>Role:</strong> fusion engine. <strong>Priority:</strong> staying alive long enough to unlock fusion value each dungeon. <strong>Synergy:</strong> party planning should revolve around expected fusion availability.</p>
+          <h3>Gobi</h3>
+          <p><strong>Role:</strong> progression specialist with critical route access. <strong>Priority:</strong> survivability in forced solo or limited-party windows.</p>
+          <h3>Ox</h3>
+          <p><strong>Role:</strong> frontline tank and physical anchor. <strong>Priority:</strong> defense and HP durability. <strong>Synergy:</strong> protects caster-heavy backline compositions.</p>
+          <h3>Bleu</h3>
+          <p><strong>Role:</strong> magic control and endgame scaling. <strong>Priority:</strong> AP support and anti-magic options. <strong>Synergy:</strong> dominates with parties that can feed her long fights.</p>
+          <h3>Mogu</h3>
+          <p><strong>Role:</strong> situational utility and optional route optimization. <strong>Priority:</strong> survivability so utility turns are reliable.</p>
+          <h3>Recommended Party Templates</h3>
+          <ul>
+            <li>Safe progression: Ryu + Nina + Ox + Bleu.</li>
+            <li>Fusion utility route: Ryu + Nina + Karn + flexible fourth slot.</li>
+            <li>Boss burst route: Ryu + Bleu + Ox + support healer.</li>
+          </ul>
+        </section>
+
+        <section id="guide-dragons" class="panel guide-card" data-search-item>
+          <h2>5) Dragon System (Advanced Explanation)</h2>
+          <h3>Transformation Mechanics</h3>
+          <p>Dragon forms are AP-based burst tools. They are not efficient for random encounters in most chapters; they are best reserved for boss phase pushes, emergency damage checks, or ending high-risk fights quickly.</p>
+          <h3>Form Unlock Roadmap</h3>
+          <ul>
+            <li>First Shrine: SnoDr, FlmDr, ThrDr.</li>
+            <li>Second Shrine: IceDgn, FirDgn, BltDgn, GldDgn.</li>
+            <li>Third Shrine chain: Rudra.</li>
+            <li>Hidden condition route: Agni.</li>
+          </ul>
+          <h3>Strategic AP Usage</h3>
+          <ul>
+            <li>Use base forms for guaranteed finish windows, not exploratory trial turns.</li>
+            <li>Enter bosses with AP reserve target: at least one full dragon cast plus emergency healing.</li>
+            <li>Agni should be treated as a final-phase solution, not mid-fight experimentation.</li>
+          </ul>
+          <h3>Party Synergies</h3>
+          <ul>
+            <li>Nina and Bleu sustain AP/healing pace to support dragon timing.</li>
+            <li>Ox absorbs frontline pressure so Ryu can hold AP until decisive turns.</li>
+          </ul>
+        </section>
+
+        <section id="guide-equipment" class="panel guide-card" data-search-item>
+          <h2>6) Equipment and Optimization Guide</h2>
+          <h3>Best Upgrade Priorities by Stage</h3>
+          <ul>
+            <li>Early: reliable armor and accuracy-safe weapon upgrades.</li>
+            <li>Mid: revisit-locked power spikes (LifeAR, IcyDR), then fusion support gear.</li>
+            <li>Late: dragon set completion and anti-magic setup before final chain.</li>
+          </ul>
+          <h3>Rare and Hidden Gear Targets</h3>
+          <ul>
+            <li>SteelBW hidden path during Agua progression.</li>
+            <li>Dragon set fishing route with Rod5 windows.</li>
+            <li>Late dig rewards: StarSH and MystCW.</li>
+            <li>Flea Market phase targets: DarkDR, AgileHT, Sleeper, MaskSH, EvilRB.</li>
+          </ul>
+          <h3>Cost vs Value Rules</h3>
+          <ul>
+            <li>Do buy defensive upgrades before long dungeon chains.</li>
+            <li>Do not overbuy temporary offense when a fixed pickup is one chapter away.</li>
+            <li>Keep at least one reserve purchase budget for emergency recovery items.</li>
+          </ul>
+        </section>
+
+        <section id="guide-exp-zones" class="panel guide-card" data-search-item>
+          <h2>7) EXP Leveling Zones and Grinding Guide</h2>
+          <h3>Early Game Leveling (Levels 5–12)</h3>
+          <p><strong>Best Zone:</strong> Camlon and surrounding routes.</p>
+          <ul>
+            <li>Camlon interior encounters: 25–40 EXP per fight. Repeatable near save inn.</li>
+            <li>Recommended level target before Nanai: Lv 7–8.</li>
+            <li>Strategy: clear side rooms, save when low, repeat safe loops until healing economy stabilizes.</li>
+          </ul>
+          <h3>Mid-Early Leveling (Levels 12–20)</h3>
+          <p><strong>Best Zones:</strong> Romero/Karma spring, Tantar/Tuntar side routes.</p>
+          <ul>
+            <li>Romero encounters: 50–80 EXP, no major threat spike.</li>
+            <li>Karma Forest side encounters: 60–90 EXP, higher risk but rewarding if party survives cleanly.</li>
+            <li>Recommended level before Auria arc: Lv 16–18.</li>
+            <li>Strategy: mix safe loops with moderate-risk fights; return to inn frequently for healing economy resets.</li>
+          </ul>
+          <h3>Midgame Leveling (Levels 18–30)</h3>
+          <p><strong>Best Zones:</strong> Krypt, Sea Volcano (early sweeps), Auria-Arad transition.</p>
+          <ul>
+            <li>Krypt encounters: 100–150 EXP per fight, moderate difficulty.</li>
+            <li>Sea Volcano encounters: 130–180 EXP, higher risk but consistent party gains.</li>
+            <li>Recommended level before Gobi solo: Lv 22–24.</li>
+            <li>Strategy: use Krypt for controlled, repeatable loops. Sea Volcano for longer pushes where inventory space supports full clears.</li>
+          </ul>
+          <h3>Late Midgame Leveling (Levels 28–38)</h3>
+          <p><strong>Best Zones:</strong> Nabal chain, Bleu route, Gust Valley transitions.</p>
+          <ul>
+            <li>Nabal encounters: 160–200 EXP, fusion-friendly (Karn unlock benefits).</li>
+            <li>Gust and surrounding zones: 180–220 EXP, good quality-to-risk ratio.</li>
+            <li>Recommended level before Scande: Lv 35–37.</li>
+            <li>Strategy: consolidate party with all 6–8 recruits. Balanced encounters favor full party over solo power-leveling.</li>
+          </ul>
+          <h3>Late Game Leveling (Levels 37–45)</h3>
+          <p><strong>Best Zones:</strong> Scande region, Pagoda transitions, pre-Obelisk sweeps.</p>
+          <ul>
+            <li>Scande encounters: 220–280 EXP, highest consistency before final dungeon.</li>
+            <li>Pagoda transitions: 250–300 EXP, attrition-heavy but rewarding for level pushes.</li>
+            <li>Recommended level before final chain: Lv 42–45 (Ryu), Lv 38–42 (support).</li>
+            <li>Strategy: final levels come from story fights and pre-Obelisk optional clears. Balance between leveling and resource preservation.</li>
+          </ul>
+          <h3>Efficient Solo/Duo Power-Leveling Windows</h3>
+          <p>Certain story sections force solo or limited-party play. These windows are powerful leveling opportunities if exploited correctly.</p>
+          <ul>
+            <li><strong>Gobi Solo Arc (Lv 21–25):</strong> Gobi and Ryu solo fights yield 300+ EXP for solo characters. Stack this window if extra levels are needed.</li>
+            <li><strong>Tock Sequence (Lv 34–38):</strong> Story-driven solo battles can fast-level key units 2–3 levels faster than full-party grinding.</li>
+            <li>Strategy: use solo windows for Nina and Ryu if midgame scaling feels weak. Avoid over-grinding full party during these windows.</li>
+          </ul>
+          <h3>Enemy Types and Their Rewards</h3>
+          <ul>
+            <li><strong>Soldiers / Standard Humanoids:</strong> 20–80 EXP (low), common in early zones.</li>
+            <li><strong>Beasts / Flying Enemies:</strong> 50–150 EXP (mid), faster attacks but balanced difficulty.</li>
+            <li><strong>Status-Prone / Magic Enemies:</strong> 60–200 EXP (high reward for risk), require mitigation items.</li>
+            <li><strong>Multi-enemy Packs:</strong> scale EXP per enemy; 3-enemy fights may yield 200+ total EXP if all survive.</li>
+          </ul>
+          <h3>Grinding Route Optimization Tips</h3>
+          <ul>
+            <li>Pick a zone with nearby inn/save point; wipe tolerance is higher if reset cost is low.</li>
+            <li>Clear exactly 3–4 fights per inn trip; exit when inventory shows strain or healing stock dips below 60% max.</li>
+            <li>Alternate between two zones weekly to avoid monotony and spread equipment upgrades across chapters.</li>
+            <li>Track level increments per zone; if you outgrow a zone (3+ consecutive wipes = danger), move to next tier immediately.</li>
+          </ul>
+        </section>
+
+        <section id="guide-bosses" class="panel guide-card" data-search-item>
+          <h2>8) Boss Strategy Compendium</h2>
+          <p>Comprehensive boss guide with recommended levels, weaknesses, and detailed tactics. Use these ranges as practical targets, not strict requirements.</p>
+          
+          <h3>Team Composition Strategy (Core System)</h3>
+          <p>Boss difficulty scales heavily with party synergy, not just raw level. Optimal composition depends on game phase and available recruits.</p>
+          
+          <h4>Early Game (Lv 5-16): Ryu + Nina + One Offensive Unit</h4>
+          <ul>
+            <li><strong>Core duo:</strong> Ryu (physical DPS) + Nina (healing/support). This pair handles 95% of early content.</li>
+            <li><strong>Third slot options:</strong> Bo (tank/defense), Gobi (physical DPS if multiple threats), or Ox (minor healing backup).</li>
+            <li><strong>Loadout:</strong> 2x physical attackers + 1x healer is the baseline. Focus healing and survival over offense.</li>
+            <li><strong>Dragon synergy:</strong> Early dragons (Agni, Bleu early fusion) can convert damage deficit into one-turn burst windows. Use sparingly.</li>
+          </ul>
+          
+          <h4>Midgame (Lv 18-30): Full Party (4-5 units) with Role Balance</h4>
+          <ul>
+            <li><strong>Recommended core:</strong> Ryu (physical), Nina (healing), Gobi or Karn (fusions), Ox or Deis (support/healing backup).</li>
+            <li><strong>Offensive scale:</strong> 2 dedicated physical DPS + 1-2 fusion support handles bosses efficiently.</li>
+            <li><strong>Healing scale:</strong> 1-2 dedicated healers (Nina + one backup). If heals run dry, you lack party depth.</li>
+            <li><strong>Dragon timing:</strong> Save dragons for critical breakpoints (boss 20 HP away from death). Predict damage + use fusion timing to end fights in 2-3 extra dragon turns max.</li>
+            <li><strong>Status mitigation:</strong> Identify boss status threats (paralysis, confusion) and equip resistance items or bring counter-status herbs.</li>
+          </ul>
+          
+          <h4>Late Midgame (Lv 28-38): Specialized Loadouts per Boss</h4>
+          <ul>
+            <li><strong>Physical-heavy bosses:</strong> Swap to defensive party (Ryu + Nina + Bo tank for damage mitigation). Reduce offense focus; prioritize 3-turn survival cycles.</li>
+            <li><strong>Magic-heavy bosses:</strong> Maximize elemental resist armor (Tundra if available). Bring Puka or magic-reflect fusion if available.</li>
+            <li><strong>Status-prone bosses:</strong> Pre-equip resist items. Use Karn fusions for AOE coverage and faster phase transitions.</li>
+            <li><strong>Recommended setup:</strong> Ryu (DPS), Nina (primary heal), Deis (magic backup/healing), one damage fusion (Karn/Agni), one tactical (Bleu/Ox support).</li>
+          </ul>
+          
+          <h4>Endgame (Lv 37-45): Dual Loadout System</h4>
+          <ul>
+            <li><strong>Loadout A (Physical-oriented):</strong> Ryu, Nina, Bo, Karn fusion. High durability, consistent damage via fusions.</li>
+            <li><strong>Loadout B (Magic-oriented):</strong> Ryu, Deis, Nina, Agni fusion. High offense scaling but more fragile. Switch if Loadout A struggles with time limit.</li>
+            <li><strong>Swap window:</strong> After Jade, before final dungeon. Re-equip both parties with optimal gear.</li>
+            <li><strong>Final boss composition:</strong> Full 6-unit rotation: Ryu, Nina (heal primary), Deis (heal backup), one fusion specialist (Karn high damage), two tactical units (Ox/Bleu for AP management). Rotate out damaged units to maintain AP economy.</li>
+          </ul>
+          
+          <h4>General Composition Rules</h4>
+          <ul>
+            <li><strong>Healer sufficiency:</strong> 1 healer per 3 damage dealers. If you have 4 attackers, you need 1.3+ healers' equivalent AP output.</li>
+            <li><strong>AP economy:</strong> 3-4 strong AP tools + 2-3 emergency revives should be your baseline inventory for post-Lv 25 bosses.</li>
+            <li><strong>Dragon fusion timing:</strong> Use only when boss is &lt;30% HP. Do not waste fusion cooldowns on comfort heals.</li>
+            <li><strong>Status roles:</strong> If boss uses confusion/paralysis, bring one dedicated clearer (item-heavy unit or Puka route). Do not brute-force through status if avoidable.</li>
+            <li><strong>Damage scaling:</strong> Two well-geared physical DPS + one fusion handler beats one over-leveled unit every time. Synergy &gt; raw stats.</li>
+          </ul>
+          
+          <h3>Individual Boss Strategies</h3>
+          <div class="guide-grid">
+            <article class="guide-block" data-search-item>
+              <h3>Frog (Lv 5-7)</h3>
+              <p><strong>Weakness:</strong> No gimmick; punishes low healing cadence. <strong>Recommended Gear:</strong> Basic armor, any weapon. <strong>Strategy:</strong> Keep HP high, attack steadily, avoid risky low-HP greed turns. If Frog is taking 8-10 turns to kill, you're too weak—grind 1-2 levels in Camlon. Recommended: Lv 6+ minimum, 30+ HP per fighter.</p>
+            </article>
+            <article class="guide-block" data-search-item>
+              <h3>Knight (Lv 8-10)</h3>
+              <p><strong>Weakness:</strong> High initial burst; slows mid-fight. <strong>Recommended Gear:</strong> Medium armor, prioritize defense. <strong>Strategy:</strong> Survive opening turns (3-4 attacks), stabilize with healing, then commit consistent damage. Underleveled backup: use defensive turns and heal-only cycles until pattern slows. Use Dragon/Karn if available. Keep 2-3 heals reserved before entering.</p>
+            </article>
+            <article class="guide-block" data-search-item>
+              <h3>Morte / Mortea / Wizard (Lv 10-12)</h3>
+              <p><strong>Weakness:</strong> High magic output, low physical defense. <strong>Recommended Gear:</strong> Elemental resist if available, focus physical attackers. <strong>Strategy:</strong> Focus highest burst threat first (eliminate mages before heavy hitters). Keep AP for emergency stabilization—do not preemptive overkill. If magic damage exceeds 25 HP/turn, raise physical defense or grind 2 more levels.</p>
+            </article>
+            <article class="guide-block" data-search-item>
+              <h3>Pog / General / Wisp / Gremlin (Lv 12-16)</h3>
+              <p><strong>Weakness:</strong> Status effects, group vulnerabilities. <strong>Recommended Gear:</strong> Paralysis/Poison resist if available. <strong>Strategy:</strong> Prioritize status pressure enemies (eliminate paralyzers first). Backup plan: grind one safe loop in Romero and return with stronger healing economy. Use Karn if available to boost damage output.</p>
+            </article>
+            <article class="guide-block" data-search-item>
+              <h3>Talon Trial (solo Ryu)</h3>
+              <p><strong>Weakness:</strong> High early damage, solo restriction. <strong>Strategy:</strong> Solo consistency build—measure AP use carefully, no panic aggression. Bring 5-6 healing items minimum. If soloing feels impossible, return at Lv 24+ instead of at Lv 21. Consider grinding 2 levels if wipes exceed 2 attempts.</p>
+            </article>
+            <article class="guide-block" data-search-item>
+              <h3>Sand Worm / EyeSpy (Lv 17-20)</h3>
+              <p><strong>Weakness:</strong> EyeSpy has status attacks; Sand Worm is tank-heavy. <strong>Recommended Gear:</strong> Full healing set, high HP armor. <strong>Strategy:</strong> Enter with full resources (20+ heals). EyeSpy punishes sloppy sustain. Underleveled backup: prioritize survival and wear down slowly over 20+ turns. Use dragon forms to accelerate if overleveled.</p>
+            </article>
+            <article class="guide-block" data-search-item>
+              <h3>Squid / Octo / Morteo (Lv 21-25)</h3>
+              <p><strong>Weakness:</strong> Multi-enemy encounters, phase transitions. <strong>Recommended Gear:</strong> AOE coverage if available (Karn/Dragon). <strong>Strategy:</strong> Preserve AP for dangerous phase spikes. Recover between chain fights whenever possible (especially before Morteo). Target swaps: kill high-threat enemies first.</p>
+            </article>
+            <article class="guide-block" data-search-item>
+              <h3>Toad / SlimeX (Lv 25-29)</h3>
+              <p><strong>Weakness:</strong> Heal-dependent, cannot outlast mana wars. <strong>Recommended Gear:</strong> Maximized healing equipment. <strong>Strategy:</strong> Balance single-target focus with strict heal timing. Do not enter with low revive stock (minimum 4-5 revives). If heals run dry, you're grinding too few levels—return at Lv 28+.</p>
+            </article>
+            <article class="guide-block" data-search-item>
+              <h3>Bain / HornToad / Mothro (Lv 31-38)</h3>
+              <p><strong>Weakness:</strong> Dragon damage is extremely effective; multi-phase fights. <strong>Recommended Gear:</strong> Dragon enhancement if available. <strong>Strategy:</strong> Use dragon damage selectively for breakpoint control (when boss is 1 dragon burst from death). Conserve AP for the closing turns. Recommended: Lv 34+ minimum for safe clear.</p>
+            </article>
+            <article class="guide-block" data-search-item>
+              <h3>Mote Forms / Avian / Zog / Sara (Lv 34-45)</h3>
+              <p><strong>Weakness:</strong> Varied resistances, phase mechanics. <strong>Recommended Gear:</strong> Loadout swaps between battles if possible. <strong>Strategy:</strong> These fights reward prepared loadouts and resistance swaps. Backup: reduce greed turns and commit to endurance play. Agni fusion highly recommended for damage consistency.</p>
+            </article>
+            <article class="guide-block" data-search-item>
+              <h3>Goda / Jade / Final Boss Chain</h3>
+              <p><strong>Weakness:</strong> Marathon endurance battle, three-phase progression. <strong>Recommended Gear:</strong> Dual loadouts. <strong>Strategy:</strong> Treat this as a marathon chain, not three separate fights. Save after Jade, restock, verify Agni condition, then execute final phases with planned turn economy. Recommended: Lv 42+ Ryu, Lv 38+ support staff.</p>
+            </article>
+          </div>
+        </section>
+
+        <section id="guide-secrets" class="panel guide-card" data-search-item>
+          <h2>9) Secrets and Optional Content</h2>
+          <ul>
+            <li>Hidden interaction sweep: trees, wells, beds, walls in every major town revisit.</li>
+            <li>Tunlan event chain completion for additional rewards and narrative flavor.</li>
+            <li>Dig marks and late-game secret dig zone for premium gear pieces.</li>
+            <li>Sealed chamber openings using Puka after unlock windows.</li>
+            <li>Tri-Rang and other hidden pickups tied to careful map checking.</li>
+          </ul>
+          <p><strong>Missable warning:</strong> story lock points can cut off limited shops and event states. Complete region-specific checks before each major key progression.</p>
+        </section>
+
+        <section id="guide-endgame" class="panel guide-card" data-search-item>
+          <h2>10) Endgame Preparation and Final Boss</h2>
+          <h3>Pre-Final Dungeon Checklist Strategy</h3>
+          <ul>
+            <li>Target levels: Ryu 45+, Nina 40+, core frontliners near 40+.</li>
+            <li>Inventory baseline: 15+ strong heals, 10+ AP tools, 6+ revives.</li>
+            <li>Loadout staging: one anti-magic set and one physical durability set.</li>
+            <li>Bank zenny and sort inventory so critical items are top-access.</li>
+          </ul>
+          <h3>Final Route Execution</h3>
+          <ul>
+            <li>Conserve resources during trash fights; do not full-burst routine encounters.</li>
+            <li>After Jade, save and restock before committing to the final chain.</li>
+            <li>Confirm Agni requirement immediately before entering final encounter sequence.</li>
+          </ul>
+          <h3>Final Boss Phases</h3>
+          <ul>
+            <li>Phase 1: stabilize and read pattern; do not overspend AP immediately.</li>
+            <li>Phase 2: dragon burst when heal cycle is secured and survivability is stable.</li>
+            <li>Phase 3: prioritize guaranteed survival actions over risky finish attempts.</li>
+          </ul>
+        </section>
+
+        <section id="guide-completion" class="panel guide-card" data-search-item>
+          <h2>11) 100% Completion Guide</h2>
+          <h3>Completion Categories</h3>
+          <ul>
+            <li>All playable characters recruited.</li>
+            <li>All Karn fusions unlocked and used in relevant progression windows.</li>
+            <li>All dragon forms unlocked, including Agni.</li>
+            <li>Dragon gear set completed and major rare gear acquired.</li>
+            <li>Major optional content and hidden pickups completed.</li>
+            <li>True final route condition fulfilled.</li>
+          </ul>
+          <h3>Efficient Completion Route</h3>
+          <ol>
+            <li>Complete each chapter's missable sweep before moving key story flags.</li>
+            <li>Bundle revisits right after unlocks (Karn routes, chamber openings, fishing upgrades).</li>
+            <li>Finish side objectives before Scande-Pagoda-Obelisk chain to avoid stress routing.</li>
+          </ol>
+          <p>The Tracker Mode sections mirror these categories directly, so a checked tracker path means your guide progression is complete.</p>
+        </section>
+      </div>
+
+      <div id="trackerMode" class="mode-view" data-mode-view="tracker" aria-hidden="true">
+        <section id="tracker-dashboard" class="panel tracker-panel" data-search-item>
+          <div class="panel-head">
+            <h2>Tracker Dashboard</h2>
+            <span id="overallPct">0%</span>
+          </div>
+          <div class="progress-wrap"><div id="overallBar" class="progress-bar"></div></div>
+          <div class="grid two">
+            <article class="stat-card">
+              <h3>Total Checklist Items</h3>
+              <p id="totalTasks">0</p>
+            </article>
+            <article class="stat-card">
+              <h3>Completed</h3>
+              <p id="doneTasks">0</p>
+            </article>
+          </div>
+          <p class="hint">Every tracker item maps to a Guide Mode section. Use search to isolate one subsystem at a time.</p>
+        </section>
+
+        <section id="tracker-story" class="panel tracker-panel" data-search-item>
+          <h2>Main Story Progress Tracker</h2>
+          <details class="segment" open>
+            <summary>Chapter Completion Milestones</summary>
+            <div class="checklist">
+              <label data-search-item><input type="checkbox" data-id="story-1" /> Ch1 Drogen-Camlon route completed (Guide 3, Chapter 1).</label>
+              <label data-search-item><input type="checkbox" data-id="story-2" /> Ch2 Nanai infiltration and Knight defeated (Guide 3, Chapter 2).</label>
+              <label data-search-item><input type="checkbox" data-id="story-3" /> Ch3 Winlan-Romero-Karma arc completed (Guide 3, Chapter 3).</label>
+              <label data-search-item><input type="checkbox" data-id="story-4" /> Ch4 Fortress-Agua-first shrine completed (Guide 3, Chapter 4).</label>
+              <label data-search-item><input type="checkbox" data-id="story-5" /> Ch5 Auria-Arad-Krypt and Karn unlock complete (Guide 3, Chapter 5).</label>
+              <label data-search-item><input type="checkbox" data-id="story-6" /> Ch6 Sea and fusion expansion completed (Guide 3, Chapter 6).</label>
+              <label data-search-item><input type="checkbox" data-id="story-7" /> Ch7 Nabal-Bleu-second shrine completed (Guide 3, Chapter 7).</label>
+              <label data-search-item><input type="checkbox" data-id="story-8" /> Ch8 HornToad-Mogu-Doof/Puka-Spyre completed (Guide 3, Chapter 8).</label>
+              <label data-search-item><input type="checkbox" data-id="story-9" /> Ch9 Tock-third shrine-Scande-Pagoda completed (Guide 3, Chapter 9).</label>
+              <label data-search-item><input type="checkbox" data-id="story-10" /> Ch10 Obelisk final route cleared (Guide 3, Chapter 10).</label>
+            </div>
+          </details>
+        </section>
+
+        <section id="tracker-bosses" class="panel tracker-panel" data-search-item>
+          <h2>Boss Tracker</h2>
+          <div class="checklist two-col">
+            <label data-search-item><input type="checkbox" data-id="boss-1" /> Frog</label>
+            <label data-search-item><input type="checkbox" data-id="boss-2" /> Knight</label>
+            <label data-search-item><input type="checkbox" data-id="boss-3" /> Morte</label>
+            <label data-search-item><input type="checkbox" data-id="boss-4" /> Mortea</label>
+            <label data-search-item><input type="checkbox" data-id="boss-5" /> Wizard</label>
+            <label data-search-item><input type="checkbox" data-id="boss-6" /> Pog</label>
+            <label data-search-item><input type="checkbox" data-id="boss-7" /> General</label>
+            <label data-search-item><input type="checkbox" data-id="boss-8" /> Wisp</label>
+            <label data-search-item><input type="checkbox" data-id="boss-9" /> Gremlin</label>
+            <label data-search-item><input type="checkbox" data-id="boss-10" /> Talon</label>
+            <label data-search-item><input type="checkbox" data-id="boss-11" /> Sand Worm</label>
+            <label data-search-item><input type="checkbox" data-id="boss-12" /> EyeSpy</label>
+            <label data-search-item><input type="checkbox" data-id="boss-13" /> Squid</label>
+            <label data-search-item><input type="checkbox" data-id="boss-14" /> Octo</label>
+            <label data-search-item><input type="checkbox" data-id="boss-15" /> Morteo</label>
+            <label data-search-item><input type="checkbox" data-id="boss-16" /> Toad</label>
+            <label data-search-item><input type="checkbox" data-id="boss-17" /> SlimeX</label>
+            <label data-search-item><input type="checkbox" data-id="boss-18" /> Bain</label>
+            <label data-search-item><input type="checkbox" data-id="boss-19" /> HornToad</label>
+            <label data-search-item><input type="checkbox" data-id="boss-20" /> Mothro</label>
+            <label data-search-item><input type="checkbox" data-id="boss-21" /> Mote Forms</label>
+            <label data-search-item><input type="checkbox" data-id="boss-22" /> Avian</label>
+            <label data-search-item><input type="checkbox" data-id="boss-23" /> Zog</label>
+            <label data-search-item><input type="checkbox" data-id="boss-24" /> Sara</label>
+            <label data-search-item><input type="checkbox" data-id="boss-25" /> Goda</label>
+            <label data-search-item><input type="checkbox" data-id="boss-26" /> Jade</label>
+            <label data-search-item><input type="checkbox" data-id="boss-27" /> Final Boss</label>
+          </div>
+        </section>
+
+        <section id="tracker-characters" class="panel tracker-panel" data-search-item>
+          <h2>Character Unlock Tracker</h2>
+          <div class="checklist">
+            <label data-search-item><input type="checkbox" data-id="char-1" /> Ryu build online (Guide 4).</label>
+            <label data-search-item><input type="checkbox" data-id="char-2" /> Nina support engine online (Guide 4).</label>
+            <label data-search-item><input type="checkbox" data-id="char-3" /> Bo recruited and geared.</label>
+            <label data-search-item><input type="checkbox" data-id="char-4" /> Karn recruited and fusion-ready.</label>
+            <label data-search-item><input type="checkbox" data-id="char-5" /> Gobi progression route completed.</label>
+            <label data-search-item><input type="checkbox" data-id="char-6" /> Ox frontline setup complete.</label>
+            <label data-search-item><input type="checkbox" data-id="char-7" /> Bleu recruited and integrated.</label>
+            <label data-search-item><input type="checkbox" data-id="char-8" /> Mogu recruited and stabilized.</label>
+          </div>
+        </section>
+
+        <section id="tracker-items" class="panel tracker-panel" data-search-item>
+          <h2>Item and Equipment Tracker</h2>
+          <details class="segment" open>
+            <summary>Major Power Spikes and Rare Gear</summary>
+            <div class="checklist">
+              <label data-search-item><input type="checkbox" data-id="item-1" /> Rang obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-2" /> SteelBW hidden path obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-3" /> LifeAR (Agua revisit) obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-4" /> IcyDR (Agua revisit) obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-5" /> DragonSD obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-6" /> DragonHT obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-7" /> DragonAR obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-8" /> DragonSH obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-9" /> DarkBR chamber reward obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-10" /> LoveBR chamber reward obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-11" /> WindBR chamber reward obtained.</label>
+              <label data-search-item><input type="checkbox" data-id="item-12" /> StarSH obtained from dig area.</label>
+              <label data-search-item><input type="checkbox" data-id="item-13" /> MystCW obtained from dig area.</label>
+              <label data-search-item><input type="checkbox" data-id="item-14" /> Flea Market phase 2 targets complete.</label>
+              <label data-search-item><input type="checkbox" data-id="item-15" /> Flea Market phase 3 targets complete.</label>
+              <label data-search-item><input type="checkbox" data-id="item-16" /> EmporSD obtained before final chain.</label>
+            </div>
+          </details>
+        </section>
+
+        <section id="tracker-secrets" class="panel tracker-panel" data-search-item>
+          <h2>Secrets and Missables Tracker</h2>
+          <div class="checklist">
+            <label data-search-item><input type="checkbox" data-id="sec-1" /> Tunlan timed events fully completed.</label>
+            <label data-search-item><input type="checkbox" data-id="sec-2" /> Hidden tree/wall/well sweep complete for each region.</label>
+            <label data-search-item><input type="checkbox" data-id="sec-3" /> All known dig marks completed.</label>
+            <label data-search-item><input type="checkbox" data-id="sec-4" /> Sealed chambers opened where applicable.</label>
+            <label data-search-item><input type="checkbox" data-id="sec-5" /> Tri-Rang collected.</label>
+            <label data-search-item><input type="checkbox" data-id="sec-6" /> Limited shop checks done before lock points.</label>
+            <label data-search-item><input type="checkbox" data-id="sec-7" /> Post-Karn revisit sweep completed.</label>
+            <label data-search-item><input type="checkbox" data-id="sec-8" /> Final pre-Obelisk optional sweep complete.</label>
+          </div>
+        </section>
+
+        <section id="tracker-dragons" class="panel tracker-panel" data-search-item>
+          <h2>Dragon Forms Tracker</h2>
+          <div class="checklist two-col">
+            <label data-search-item><input type="checkbox" data-id="drag-1" /> SnoDr unlocked.</label>
+            <label data-search-item><input type="checkbox" data-id="drag-2" /> FlmDr unlocked.</label>
+            <label data-search-item><input type="checkbox" data-id="drag-3" /> ThrDr unlocked.</label>
+            <label data-search-item><input type="checkbox" data-id="drag-4" /> IceDgn unlocked.</label>
+            <label data-search-item><input type="checkbox" data-id="drag-5" /> FirDgn unlocked.</label>
+            <label data-search-item><input type="checkbox" data-id="drag-6" /> BltDgn unlocked.</label>
+            <label data-search-item><input type="checkbox" data-id="drag-7" /> GldDgn unlocked.</label>
+            <label data-search-item><input type="checkbox" data-id="drag-8" /> Rudra unlocked.</label>
+            <label data-search-item><input type="checkbox" data-id="drag-9" /> Agni unlocked.</label>
+            <label data-search-item><input type="checkbox" data-id="drag-10" /> AP budget plan tested for final chain.</label>
+          </div>
+        </section>
+      </div>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

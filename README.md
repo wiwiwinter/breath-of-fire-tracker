@@ -7,11 +7,11 @@
 
 A standalone, zero-dependency web application combining a comprehensive strategy handbook with an interactive 100% completion checklist for **Breath of Fire (1993)**. Built with semantic HTML5, responsive CSS Grid, and vanilla JavaScript, all progress and user preferences persist automatically in your browser's `localStorage`.
 
-> 📖 **New to the project?** Read the **[Beginner & Developer Guide (`GUIDE.md`)](GUIDE.md)** for full setup instructions, architectural explanations, customization tips, and code walkthroughs.
+> **New to the project?** Read the **[Beginner & Developer Guide (`GUIDE.md`)](GUIDE.md)** for full setup instructions, architectural explanations, customization tips, and code walkthroughs.
 
 ---
 
-## 📸 Visual Previews
+## Visual Previews
 
 ### Guide Mode (Light Theme)
 Provides a structured, spoiler-aware strategy handbook covering all 10 story chapters, boss tactics, EXP grinding zones, character breakdowns, and equipment optimization.
@@ -25,7 +25,7 @@ Tracks 79 completion milestones across 6 categories with real-time completion pe
 
 ---
 
-## ✨ Key Features
+## Key Features
 
 - **Dual-Mode Interface (`Guide` & `Tracker`)**
   - **Guide Mode**: Read-only reference handbook organized into 11 comprehensive sections (Overview, Beginner Survival, 10-Chapter Walkthrough, Character Roles, Dragon Shrine Roadmap, Gear Priorities, EXP Grinding Loops, Boss Compendium, Secrets, Endgame Prep, and 100% Route).
@@ -43,7 +43,7 @@ Tracks 79 completion milestones across 6 categories with real-time completion pe
 
 ---
 
-## 🏗️ Architecture & Workflow
+## Architecture & Workflow
 
 ```mermaid
 flowchart LR
@@ -83,7 +83,7 @@ flowchart LR
 
 ---
 
-## 📊 Content & Checklist Breakdown
+## Content & Checklist Breakdown
 
 | Mode | Section / Category | ID Anchor | Items / Coverage |
 | :--- | :--- | :--- | :--- |
@@ -106,15 +106,13 @@ flowchart LR
 
 ---
 
-## 📂 Repository Structure
+## Repository Structure
 
 ```text
 breath-of-fire-tracker/
 ├── index.html                           # Main application markup (Guide & Tracker views)
 ├── GUIDE.md                             # Detailed beginner & developer documentation
 ├── README.md                            # Project overview, visuals, and quickstart
-├── .gitignore                           # Local Git ignore rules (IDE, OS, temp files)
-├── .gitattributes                       # Line-ending normalization & archive export-ignore rules
 └── assets/
     ├── css/
     │   └── styles.css                   # Responsive layout, Light/Dark themes, component styles
@@ -127,7 +125,7 @@ breath-of-fire-tracker/
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 Because the tracker uses vanilla web standards with zero external build steps, you can run it immediately on any operating system:
 
@@ -154,6 +152,6 @@ python -m http.server 8000
 
 ---
 
-## 🛠️ Documentation & Maintenance
+## Documentation & Maintenance
 
 For a complete breakdown of how `localStorage` keys work, how to add new checklist items or guide chapters, and how to customize themes, check out **[GUIDE.md](GUIDE.md)**.

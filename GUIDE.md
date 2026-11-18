@@ -4,20 +4,20 @@ Welcome to the **Breath of Fire (1993) Strategy Guide & 100% Tracker** documenta
 
 ---
 
-## 📑 Table of Contents
+## Table of Contents
 
-1. [Project Overview](#-1-project-overview)
-2. [Directory & File Structure](#-2-directory--file-structure)
-3. [Installation & Setup](#-3-installation--setup)
-4. [Configuration & Storage Keys](#-4-configuration--storage-keys)
-5. [User Guide (How to Use the App)](#-5-user-guide-how-to-use-the-app)
-6. [Important Code Components](#-6-important-code-components)
-7. [How to Customize or Extend the Tracker](#-7-how-to-customize-or-extend-the-tracker)
-8. [Troubleshooting & FAQ](#-8-troubleshooting--faq)
+1. [Project Overview](#1-project-overview)
+2. [Directory & File Structure](#2-directory--file-structure)
+3. [Installation & Setup](#3-installation--setup)
+4. [Configuration & Storage Keys](#4-configuration--storage-keys)
+5. [User Guide (How to Use the App)](#5-user-guide-how-to-use-the-app)
+6. [Important Code Components](#6-important-code-components)
+7. [How to Customize or Extend the Tracker](#7-how-to-customize-or-extend-the-tracker)
+8. [Troubleshooting & FAQ](#8-troubleshooting--faq)
 
 ---
 
-## 🎮 1. Project Overview
+## 1. Project Overview
 
 The **Breath of Fire Tracker** is a standalone, local-first web application designed for players of the classic 1993 SNES RPG *Breath of Fire*. Instead of switching back and forth between text walkthroughs and a separate spreadsheet, this tool provides two integrated views inside a single interface:
 
@@ -32,7 +32,7 @@ The project is written in standard **HTML5**, **CSS3**, and **Vanilla JavaScript
 
 ---
 
-## 📂 2. Directory & File Structure
+## 2. Directory & File Structure
 
 The repository is organized cleanly so that markup, styles, scripts, and visual assets live in dedicated folders:
 
@@ -41,8 +41,6 @@ breath-of-fire-tracker/
 ├── index.html                           # Entry point containing sidebar, Guide view, and Tracker view
 ├── README.md                            # High-level overview, badges, diagrams, and previews
 ├── GUIDE.md                             # This comprehensive beginner & developer guide
-├── .gitignore                           # Prevents IDE, OS, and temporary files from being committed
-├── .gitattributes                       # Enforces consistent LF line endings & archive export exclusions
 └── assets/
     ├── css/
     │   └── styles.css                   # Theme variables, responsive grid layout, and UI styling
@@ -60,7 +58,7 @@ breath-of-fire-tracker/
 
 ---
 
-## 🚀 3. Installation & Setup
+## 3. Installation & Setup
 
 ### Prerequisites
 - Any modern web browser (Chrome, Edge, Firefox, Safari, Brave).
@@ -74,7 +72,7 @@ breath-of-fire-tracker/
    git clone https://github.com/wiwiwinter/breath-of-fire-tracker.git
    cd breath-of-fire-tracker
    ```
-   *(Alternatively, click **Code → Download ZIP** on GitHub and extract the folder on your computer.)*
+   *(Alternatively, click **Code -> Download ZIP** on GitHub and extract the folder on your computer.)*
 
 2. **Launch the Application**
    You can open `index.html` directly from your file explorer or terminal:
@@ -106,7 +104,7 @@ breath-of-fire-tracker/
 
 ---
 
-## ⚙️ 4. Configuration & Storage Keys
+## 4. Configuration & Storage Keys
 
 The application requires zero manual configuration files. All user settings and checklist progress are automatically saved in the browser's `localStorage` under three versioned keys defined at the top of `assets/js/app.js`:
 
@@ -116,17 +114,17 @@ The application requires zero manual configuration files. All user settings and 
 | `MODE_KEY` | `bof1_ui_mode_v1` | String (`"guide"` or `"tracker"`) | `"guide"` | Remembers whether you last viewed Guide Mode or Tracker Mode. |
 | `THEME_KEY` | `bof1_theme_v1` | String (`"light"` or `"dark"`) | `"light"` | Remembers your active color theme preference. |
 
-> 💡 **Tip**: Because `localStorage` is scoped to the browser profile and origin, your progress stays saved even if you close the tab or restart your computer.
+> **Tip**: Because `localStorage` is scoped to the browser profile and origin, your progress stays saved even if you close the tab or restart your computer.
 
 ---
 
-## 🧭 5. User Guide (How to Use the App)
+## 5. User Guide (How to Use the App)
 
 1. **Switching Modes (`Show Tracker` / `Show Guide`)**
    - Click the top button in the sidebar (`#modeToggle`) to switch between reading the strategy guide and checking off tasks in the tracker.
    - The sidebar navigation menu automatically updates to show links only for the active mode.
 
-2. **Toggling Light & Dark Themes (`🌙 Dark` / `☀️ Light`)**
+2. **Toggling Light & Dark Themes (`Dark` / `Light`)**
    - Click the theme button (`#themeToggle`) to switch between the parchment-inspired Light Mode and the low-glare Dark Mode.
 
 3. **Using the Live Search Bar**
@@ -146,7 +144,7 @@ The application requires zero manual configuration files. All user settings and 
 
 ---
 
-## 🧩 6. Important Code Components
+## 6. Important Code Components
 
 Understanding how `index.html`, `assets/css/styles.css`, and `assets/js/app.js` interact makes modifying the project straightforward.
 
@@ -189,7 +187,7 @@ The search algorithm inspects only the active mode container (`#guideMode` or `#
 
 ---
 
-## 🛠️ 7. How to Customize or Extend the Tracker
+## 7. How to Customize or Extend the Tracker
 
 ### Adding a New Checklist Item
 1. Open `index.html` and scroll to the desired tracker section inside `<div id="trackerMode">` (for example, `#tracker-items`).
@@ -222,7 +220,7 @@ Open `assets/css/styles.css` and adjust the CSS variables at the top of the file
 
 ---
 
-## ❓ 8. Troubleshooting & FAQ
+## 8. Troubleshooting & FAQ
 
 - **Why isn't my progress showing up when I switch browsers?**
   `localStorage` is stored locally inside the specific browser you used (e.g., Edge vs. Chrome). Stick to the same browser to keep your saved state.

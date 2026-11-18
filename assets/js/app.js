@@ -164,7 +164,7 @@ function applyTheme(theme) {
 
   document.documentElement.setAttribute("data-theme", isDark ? "dark" : "light");
   currentThemeLabel.textContent = isDark ? "Dark Mode" : "Light Mode";
-  themeToggle.textContent = isDark ? "☀️ Light" : "🌙 Dark";
+  themeToggle.textContent = isDark ? "Light" : "Dark";
 
   saveTheme(theme);
 }

@@ -50,7 +50,7 @@
   <!-- Theme Switch -->
   <text x="20" y="214" font-size="12" font-weight="600" fill="#b8d0c8">Dark Mode</text>
   <rect x="20" y="222" width="270" height="36" rx="9" fill="url(#darkThemeBtnGrad)" stroke="#4a7c9e"/>
-  <text x="155" y="245" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">☀️ Light</text>
+  <text x="155" y="245" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">Light</text>
 
   <!-- Search Input -->
   <text x="20" y="280" font-size="12" font-weight="600" fill="#b8d0c8">Search Current Mode</text>

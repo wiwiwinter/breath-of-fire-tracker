@@ -1,0 +1,176 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="darkSidebarGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a302f"/>
+      <stop offset="100%" stop-color="#1f2422"/>
+    </linearGradient>
+    <linearGradient id="darkThemeBtnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#1f3a4d"/>
+      <stop offset="100%" stop-color="#2d5a7b"/>
+    </linearGradient>
+    <linearGradient id="progressGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#4dd9c1"/>
+      <stop offset="100%" stop-color="#f5c04d"/>
+    </linearGradient>
+    <radialGradient id="darkOrb1" cx="80%" cy="-10%" r="45%">
+      <stop offset="0%" stop-color="#2f3a38"/>
+      <stop offset="100%" stop-color="#1a1f1e" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="darkShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Main Dark Background -->
+  <rect width="1200" height="720" rx="12" fill="#1a1f1e"/>
+  <rect width="1200" height="720" rx="12" fill="url(#darkOrb1)"/>
+
+  <!-- Browser Window Top Bar -->
+  <rect width="1200" height="38" rx="12" fill="#141817"/>
+  <rect y="20" width="1200" height="18" fill="#141817"/>
+  <circle cx="22" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="19" r="6" fill="#27c93f"/>
+  <rect x="90" y="8" width="460" height="22" rx="6" fill="#252b2a" stroke="#3d4947"/>
+  <text x="104" y="23" font-size="11" fill="#b8d0c8" font-family="'IBM Plex Sans', sans-serif">Breath of Fire (1993) Strategy Guide + Tracker — Tracker Mode (Dark)</text>
+
+  <!-- Sidebar -->
+  <rect x="0" y="38" width="310" height="682" fill="url(#darkSidebarGrad)"/>
+  <line x1="310" y1="38" x2="310" y2="720" stroke="#3d4947" stroke-width="1"/>
+
+  <text x="20" y="74" font-size="22" font-weight="700" fill="#ffffff">Breath of Fire</text>
+  <text x="20" y="99" font-size="22" font-weight="700" fill="#4dd9c1">SNES Strategy Hub</text>
+  <text x="20" y="122" font-size="12.5" fill="#b8d0c8" font-family="'IBM Plex Sans', sans-serif">Comprehensive Guide Mode + 100% Tracker Mode.</text>
+
+  <!-- Mode Switch -->
+  <text x="20" y="148" font-size="12" font-weight="600" fill="#b8d0c8">Tracker Mode</text>
+  <rect x="20" y="156" width="270" height="36" rx="9" fill="#323938" stroke="#4dd9c1"/>
+  <text x="155" y="179" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">Show Guide</text>
+
+  <!-- Theme Switch -->
+  <text x="20" y="214" font-size="12" font-weight="600" fill="#b8d0c8">Dark Mode</text>
+  <rect x="20" y="222" width="270" height="36" rx="9" fill="url(#darkThemeBtnGrad)" stroke="#4a7c9e"/>
+  <text x="155" y="245" font-size="13" font-weight="600" fill="#ffffff" text-anchor="middle">☀️ Light</text>
+
+  <!-- Search Input -->
+  <text x="20" y="280" font-size="12" font-weight="600" fill="#b8d0c8">Search Current Mode</text>
+  <rect x="20" y="288" width="270" height="36" rx="10" fill="#3d4947" stroke="#4d5c59"/>
+  <text x="32" y="311" font-size="12.5" fill="#b8d0c8" font-family="'IBM Plex Sans', sans-serif">Type chapter, boss, item, character...</text>
+
+  <!-- Nav Links (Tracker Mode) -->
+  <g font-family="'IBM Plex Sans', sans-serif" font-size="12.5" font-weight="500" fill="#ffffff">
+    <rect x="20" y="338" width="270" height="31" rx="8" fill="#323938" stroke="#4dd9c1" stroke-width="1.5"/>
+    <text x="32" y="358">Tracker: Dashboard</text>
+
+    <rect x="20" y="375" width="270" height="31" rx="8" fill="#323938" stroke="#3d4947"/>
+    <text x="32" y="395">Tracker: Main Story</text>
+
+    <rect x="20" y="412" width="270" height="31" rx="8" fill="#323938" stroke="#3d4947"/>
+    <text x="32" y="432">Tracker: Bosses</text>
+
+    <rect x="20" y="449" width="270" height="31" rx="8" fill="#323938" stroke="#3d4947"/>
+    <text x="32" y="469">Tracker: Characters</text>
+
+    <rect x="20" y="486" width="270" height="31" rx="8" fill="#323938" stroke="#3d4947"/>
+    <text x="32" y="506">Tracker: Items</text>
+
+    <rect x="20" y="523" width="270" height="31" rx="8" fill="#323938" stroke="#3d4947"/>
+    <text x="32" y="543">Tracker: Secrets</text>
+
+    <rect x="20" y="560" width="270" height="31" rx="8" fill="#323938" stroke="#3d4947"/>
+    <text x="32" y="580">Tracker: Dragon Forms</text>
+  </g>
+
+  <!-- Sidebar Actions -->
+  <g font-size="12.5" font-weight="600">
+    <rect x="20" y="602" width="270" height="32" rx="9" fill="#323938" stroke="#3d4947"/>
+    <text x="155" y="623" fill="#ffffff" text-anchor="middle">Expand All Segments</text>
+
+    <rect x="20" y="640" width="270" height="32" rx="9" fill="#323938" stroke="#3d4947"/>
+    <text x="155" y="661" fill="#ffffff" text-anchor="middle">Collapse All Segments</text>
+
+    <rect x="20" y="678" width="270" height="32" rx="9" fill="#323938" stroke="#e6c4c4"/>
+    <text x="155" y="699" fill="#ff6b6b" text-anchor="middle">Reset Tracker Progress</text>
+  </g>
+
+  <!-- Main Content Area -->
+  <!-- Panel 1: Tracker Dashboard -->
+  <rect x="330" y="56" width="850" height="190" rx="14" fill="#252b2a" stroke="#3d4947" filter="url(#darkShadow)"/>
+  <text x="350" y="86" font-size="19" font-weight="700" fill="#ffffff">Tracker Dashboard</text>
+  <text x="1160" y="86" font-size="18" font-weight="700" fill="#4dd9c1" text-anchor="end">45%</text>
+
+  <!-- Progress Bar -->
+  <rect x="350" y="100" width="810" height="12" rx="6" fill="#3d4947"/>
+  <rect x="350" y="100" width="365" height="12" rx="6" fill="url(#progressGrad)"/>
+
+  <!-- Stat Cards -->
+  <rect x="350" y="126" width="398" height="76" rx="10" fill="#323938" stroke="#3d4947"/>
+  <text x="366" y="148" font-size="12.5" font-weight="600" fill="#b8d0c8">Total Checklist Items</text>
+  <text x="366" y="182" font-size="23" font-weight="700" fill="#ffffff">79</text>
+
+  <rect x="762" y="126" width="398" height="76" rx="10" fill="#323938" stroke="#3d4947"/>
+  <text x="778" y="148" font-size="12.5" font-weight="600" fill="#b8d0c8">Completed</text>
+  <text x="778" y="182" font-size="23" font-weight="700" fill="#ffffff">36</text>
+
+  <text x="350" y="226" font-size="12.5" fill="#b8d0c8" font-family="'IBM Plex Sans', sans-serif">Every tracker item maps to a Guide Mode section. Use search to isolate one subsystem at a time.</text>
+
+  <!-- Panel 2: Main Story Progress Tracker -->
+  <rect x="330" y="260" width="850" height="232" rx="14" fill="#252b2a" stroke="#3d4947" filter="url(#darkShadow)"/>
+  <text x="350" y="290" font-size="19" font-weight="700" fill="#ffffff">Main Story Progress Tracker</text>
+
+  <rect x="350" y="304" width="810" height="172" rx="10" fill="#323938" stroke="#3d4947"/>
+  <text x="366" y="326" font-size="14" font-weight="600" fill="#4dd9c1">▼ Chapter Completion Milestones</text>
+
+  <!-- Checkboxes inside Story Tracker -->
+  <g font-family="'IBM Plex Sans', sans-serif" font-size="12.5" fill="#ffffff">
+    <rect x="366" y="338" width="778" height="36" rx="9" fill="#252b2a" stroke="#3d4947"/>
+    <rect x="378" y="349" width="15" height="15" rx="3" fill="#4dd9c1"/>
+    <path d="M381 356.5 l3 3 l6 -6.5" stroke="#122a25" stroke-width="2" fill="none"/>
+    <text x="403" y="361">Ch1 Drogen-Camlon route completed (Guide 3, Chapter 1).</text>
+
+    <rect x="366" y="382" width="778" height="36" rx="9" fill="#252b2a" stroke="#3d4947"/>
+    <rect x="378" y="393" width="15" height="15" rx="3" fill="#4dd9c1"/>
+    <path d="M381 400.5 l3 3 l6 -6.5" stroke="#122a25" stroke-width="2" fill="none"/>
+    <text x="403" y="405">Ch2 Nanai infiltration and Knight defeated (Guide 3, Chapter 2).</text>
+
+    <rect x="366" y="426" width="778" height="36" rx="9" fill="#252b2a" stroke="#3d4947"/>
+    <rect x="378" y="437" width="15" height="15" rx="3" fill="#1a1f1e" stroke="#b8d0c8"/>
+    <text x="403" y="449">Ch3 Winlan-Romero-Karma arc completed (Guide 3, Chapter 3).</text>
+  </g>
+
+  <!-- Panel 3: Boss Tracker -->
+  <rect x="330" y="506" width="850" height="196" rx="14" fill="#252b2a" stroke="#3d4947" filter="url(#darkShadow)"/>
+  <text x="350" y="536" font-size="19" font-weight="700" fill="#ffffff">Boss Tracker</text>
+
+  <g font-family="'IBM Plex Sans', sans-serif" font-size="12.5" fill="#ffffff">
+    <!-- Row 1 -->
+    <rect x="350" y="550" width="398" height="38" rx="9" fill="#323938" stroke="#3d4947"/>
+    <rect x="364" y="561" width="15" height="15" rx="3" fill="#4dd9c1"/>
+    <path d="M367 568.5 l3 3 l6 -6.5" stroke="#122a25" stroke-width="2" fill="none"/>
+    <text x="390" y="574">Frog</text>
+
+    <rect x="762" y="550" width="398" height="38" rx="9" fill="#323938" stroke="#3d4947"/>
+    <rect x="776" y="561" width="15" height="15" rx="3" fill="#4dd9c1"/>
+    <path d="M779 568.5 l3 3 l6 -6.5" stroke="#122a25" stroke-width="2" fill="none"/>
+    <text x="802" y="574">Knight</text>
+
+    <!-- Row 2 -->
+    <rect x="350" y="596" width="398" height="38" rx="9" fill="#323938" stroke="#3d4947"/>
+    <rect x="364" y="607" width="15" height="15" rx="3" fill="#4dd9c1"/>
+    <path d="M367 614.5 l3 3 l6 -6.5" stroke="#122a25" stroke-width="2" fill="none"/>
+    <text x="390" y="620">Morte</text>
+
+    <rect x="762" y="596" width="398" height="38" rx="9" fill="#323938" stroke="#3d4947"/>
+    <rect x="776" y="607" width="15" height="15" rx="3" fill="#1a1f1e" stroke="#b8d0c8"/>
+    <text x="802" y="620">Mortea</text>
+
+    <!-- Row 3 -->
+    <rect x="350" y="642" width="398" height="38" rx="9" fill="#323938" stroke="#3d4947"/>
+    <rect x="364" y="653" width="15" height="15" rx="3" fill="#1a1f1e" stroke="#b8d0c8"/>
+    <text x="390" y="666">Wizard</text>
+
+    <rect x="762" y="642" width="398" height="38" rx="9" fill="#323938" stroke="#3d4947"/>
+    <rect x="776" y="653" width="15" height="15" rx="3" fill="#1a1f1e" stroke="#b8d0c8"/>
+    <text x="802" y="666">Pog</text>
+  </g>
+</svg>

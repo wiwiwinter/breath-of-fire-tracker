@@ -112,7 +112,6 @@ function applyMode(mode) {
   currentModeLabel.textContent = isTracker ? "Tracker Mode" : "Guide Mode";
   modeToggle.textContent = isTracker ? "Show Guide" : "Show Tracker";
 
-  // Filter nav links by mode
   navLinks.forEach((link) => {
     const linkMode = link.dataset.navType;
     link.style.display = (isTracker && linkMode === "tracker") || (!isTracker && linkMode === "guide") ? "block" : "none";

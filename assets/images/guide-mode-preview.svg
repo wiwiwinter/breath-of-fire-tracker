@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" width="1200" height="720" font-family="'Space Grotesk', 'Segoe UI', system-ui, sans-serif">
+  <defs>
+    <linearGradient id="sidebarGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#eef8f4"/>
+      <stop offset="100%" stop-color="#fcf9f3"/>
+    </linearGradient>
+    <linearGradient id="modeBtnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#e9f9f5"/>
+      <stop offset="100%" stop-color="#fff1d9"/>
+    </linearGradient>
+    <linearGradient id="themeBtnGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#ffd700"/>
+      <stop offset="100%" stop-color="#ffed4e"/>
+    </linearGradient>
+    <linearGradient id="blockGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#fbfefd"/>
+      <stop offset="100%" stop-color="#f7fbf9"/>
+    </linearGradient>
+    <radialGradient id="bgOrb1" cx="80%" cy="-10%" r="45%">
+      <stop offset="0%" stop-color="#d9ede6"/>
+      <stop offset="100%" stop-color="#f4f6f5" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="bgOrb2" cx="-10%" cy="30%" r="45%">
+      <stop offset="0%" stop-color="#fff1d8"/>
+      <stop offset="100%" stop-color="#f4f6f5" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="cardShadow" x="-5%" y="-5%" width="110%" height="115%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#0a2a23" flood-opacity="0.07"/>
+    </filter>
+  </defs>
+
+  <!-- Main Background -->
+  <rect width="1200" height="720" rx="12" fill="#f4f6f5"/>
+  <rect width="1200" height="720" rx="12" fill="url(#bgOrb1)"/>
+  <rect width="1200" height="720" rx="12" fill="url(#bgOrb2)"/>
+
+  <!-- Browser Window Top Bar -->
+  <rect width="1200" height="38" rx="12" fill="#e4ece9"/>
+  <rect y="20" width="1200" height="18" fill="#e4ece9"/>
+  <circle cx="22" cy="19" r="6" fill="#ff5f56"/>
+  <circle cx="42" cy="19" r="6" fill="#ffbd2e"/>
+  <circle cx="62" cy="19" r="6" fill="#27c93f"/>
+  <rect x="90" y="8" width="460" height="22" rx="6" fill="#ffffff" stroke="#d8e2de"/>
+  <text x="104" y="23" font-size="11" fill="#58716a" font-family="'IBM Plex Sans', sans-serif">Breath of Fire (1993) Strategy Guide + Tracker — Guide Mode (Light)</text>
+
+  <!-- Sidebar -->
+  <rect x="0" y="38" width="310" height="682" fill="url(#sidebarGrad)"/>
+  <line x1="310" y1="38" x2="310" y2="720" stroke="#d8e2de" stroke-width="1"/>
+
+  <text x="20" y="74" font-size="22" font-weight="700" fill="#122a25">Breath of Fire</text>
+  <text x="20" y="99" font-size="22" font-weight="700" fill="#0d8a72">SNES Strategy Hub</text>
+  <text x="20" y="122" font-size="12.5" fill="#58716a" font-family="'IBM Plex Sans', sans-serif">Comprehensive Guide Mode + 100% Tracker Mode.</text>
+
+  <!-- Mode Switch -->
+  <text x="20" y="148" font-size="12" font-weight="600" fill="#58716a">Guide Mode</text>
+  <rect x="20" y="156" width="270" height="36" rx="9" fill="url(#modeBtnGrad)" stroke="#bfd9d1"/>
+  <text x="155" y="179" font-size="13" font-weight="600" fill="#122a25" text-anchor="middle">Show Tracker</text>
+
+  <!-- Theme Switch -->
+  <text x="20" y="214" font-size="12" font-weight="600" fill="#58716a">Light Mode</text>
+  <rect x="20" y="222" width="270" height="36" rx="9" fill="url(#themeBtnGrad)" stroke="#daa520"/>
+  <text x="155" y="245" font-size="13" font-weight="600" fill="#122a25" text-anchor="middle">🌙 Dark</text>
+
+  <!-- Search Input -->
+  <text x="20" y="280" font-size="12" font-weight="600" fill="#58716a">Search Current Mode</text>
+  <rect x="20" y="288" width="270" height="36" rx="10" fill="#ffffff" stroke="#d8e2de"/>
+  <text x="32" y="311" font-size="12.5" fill="#7c938c" font-family="'IBM Plex Sans', sans-serif">Type chapter, boss, item, character...</text>
+
+  <!-- Nav Links (Guide Mode) -->
+  <g font-family="'IBM Plex Sans', sans-serif" font-size="12.5" font-weight="500" fill="#122a25">
+    <rect x="20" y="338" width="270" height="29" rx="8" fill="#ffffff" stroke="#0d8a72" stroke-width="1.5"/>
+    <text x="32" y="357">Guide: Game Overview</text>
+
+    <rect x="20" y="373" width="270" height="29" rx="8" fill="#ffffff" stroke="#d8e2de"/>
+    <text x="32" y="392">Guide: Beginner Deep Dive</text>
+
+    <rect x="20" y="408" width="270" height="29" rx="8" fill="#ffffff" stroke="#d8e2de"/>
+    <text x="32" y="427">Guide: Full Walkthrough</text>
+
+    <rect x="20" y="443" width="270" height="29" rx="8" fill="#ffffff" stroke="#d8e2de"/>
+    <text x="32" y="462">Guide: Character Breakdown</text>
+
+    <rect x="20" y="478" width="270" height="29" rx="8" fill="#ffffff" stroke="#d8e2de"/>
+    <text x="32" y="497">Guide: Dragon System</text>
+
+    <rect x="20" y="513" width="270" height="29" rx="8" fill="#ffffff" stroke="#d8e2de"/>
+    <text x="32" y="532">Guide: Equipment Optimization</text>
+
+    <rect x="20" y="548" width="270" height="29" rx="8" fill="#ffffff" stroke="#d8e2de"/>
+    <text x="32" y="567">Guide: Boss Compendium</text>
+  </g>
+
+  <!-- Sidebar Actions -->
+  <g font-size="12.5" font-weight="600">
+    <rect x="20" y="592" width="270" height="33" rx="9" fill="#ffffff" stroke="#d8e2de"/>
+    <text x="155" y="613" fill="#122a25" text-anchor="middle">Expand All Segments</text>
+
+    <rect x="20" y="631" width="270" height="33" rx="9" fill="#ffffff" stroke="#d8e2de"/>
+    <text x="155" y="652" fill="#122a25" text-anchor="middle">Collapse All Segments</text>
+
+    <rect x="20" y="670" width="270" height="33" rx="9" fill="#ffffff" stroke="#e6c4c4"/>
+    <text x="155" y="691" fill="#aa2f2f" text-anchor="middle">Reset Tracker Progress</text>
+  </g>
+
+  <!-- Main Content Area -->
+  <!-- Panel 1: Game Overview -->
+  <rect x="330" y="56" width="850" height="215" rx="14" fill="#ffffff" stroke="#d8e2de" filter="url(#cardShadow)"/>
+  <text x="350" y="86" font-size="19" font-weight="700" fill="#122a25">1) Game Overview</text>
+  <text x="350" y="112" font-size="14" font-weight="700" fill="#122a25">Spoiler-Free Introduction</text>
+  <text x="350" y="132" font-size="12.5" fill="#122a25" font-family="'IBM Plex Sans', sans-serif">Breath of Fire follows Ryu, a member of the Light Dragon clan, as he uncovers why the Dark Dragon Empire is conquering</text>
+  <text x="350" y="150" font-size="12.5" fill="#122a25" font-family="'IBM Plex Sans', sans-serif">the world and reviving forbidden power. Combines classic turn-based combat with map exploration and dragon forms.</text>
+
+  <text x="350" y="178" font-size="14" font-weight="700" fill="#122a25">World Structure and Progression Flow</text>
+  <g font-family="'IBM Plex Sans', sans-serif" font-size="12.5" fill="#122a25">
+    <text x="365" y="198">• Phase A: Drogen to Camlon, Nanai, Winlan and Romero arcs to establish core mechanics.</text>
+    <text x="365" y="216">• Phase B–C: Forest/Fortress, Agua chain, and Auria-Arad-Krypt sea routes expand party specialization.</text>
+    <text x="365" y="234">• Phase D–E: Fusion-centric midgame (Karn, Bleu, Mogu), Dragon shrine mastery, and Obelisk final boss chain.</text>
+  </g>
+
+  <!-- Panel 2: Full Walkthrough -->
+  <rect x="330" y="286" width="850" height="225" rx="14" fill="#ffffff" stroke="#d8e2de" filter="url(#cardShadow)"/>
+  <text x="350" y="316" font-size="19" font-weight="700" fill="#122a25">3) Full Walkthrough (Highly Detailed)</text>
+  <text x="350" y="336" font-size="12.5" fill="#58716a" font-family="'IBM Plex Sans', sans-serif">Each segment lists objective flow, NPC priorities, dungeon routing, enemy handling, boss tactics, and missables.</text>
+
+  <!-- Open Details Segment -->
+  <rect x="350" y="348" width="810" height="112" rx="10" fill="#fcfffd" stroke="#d8e2de"/>
+  <text x="366" y="370" font-size="14" font-weight="600" fill="#0f5345">▼ Chapter 1: Drogen to Camlon</text>
+  <g font-family="'IBM Plex Sans', sans-serif" font-size="12" fill="#122a25">
+    <text x="380" y="392">• Objectives: stabilize gear, clear Camlon threats, defeat Frog, confirm healing cadence.</text>
+    <text x="380" y="410">• Dungeon guidance: clear side rooms first, then center lane to prevent re-fights while low.</text>
+    <text x="380" y="428">• Boss prep: stock 8-10 Herbs, keep steady single-target damage, heal on turn breakpoints.</text>
+    <text x="380" y="446">• Missables: first-house hidden pickup in Drogen before major travel chain.</text>
+  </g>
+
+  <!-- Collapsed Segment -->
+  <rect x="350" y="468" width="810" height="32" rx="10" fill="#fcfffd" stroke="#d8e2de"/>
+  <text x="366" y="489" font-size="14" font-weight="600" fill="#0f5345">▶ Chapter 2: Nanai Infiltration and Escape</text>
+
+  <!-- Panel 3: Boss Strategy Compendium -->
+  <rect x="330" y="526" width="850" height="176" rx="14" fill="#ffffff" stroke="#d8e2de" filter="url(#cardShadow)"/>
+  <text x="350" y="556" font-size="19" font-weight="700" fill="#122a25">8) Boss Strategy Compendium</text>
+
+  <!-- Boss Grid Cards -->
+  <rect x="350" y="570" width="398" height="116" rx="10" fill="url(#blockGrad)" stroke="#dde9e4"/>
+  <text x="366" y="592" font-size="14" font-weight="700" fill="#122a25">Frog (Lv 5-7)</text>
+  <g font-family="'IBM Plex Sans', sans-serif" font-size="12" fill="#122a25">
+    <text x="366" y="612"><tspan font-weight="600">Weakness:</tspan> No gimmick; punishes low healing cadence.</text>
+    <text x="366" y="630"><tspan font-weight="600">Recommended Gear:</tspan> Basic armor, any weapon.</text>
+    <text x="366" y="648"><tspan font-weight="600">Strategy:</tspan> Keep HP high, attack steadily, avoid risky</text>
+    <text x="366" y="666">low-HP greed turns. Recommended: Lv 6+, 30+ HP.</text>
+  </g>
+
+  <rect x="762" y="570" width="398" height="116" rx="10" fill="url(#blockGrad)" stroke="#dde9e4"/>
+  <text x="778" y="592" font-size="14" font-weight="700" fill="#122a25">Knight (Lv 8-10)</text>
+  <g font-family="'IBM Plex Sans', sans-serif" font-size="12" fill="#122a25">
+    <text x="778" y="612"><tspan font-weight="600">Weakness:</tspan> High initial burst; slows mid-fight.</text>
+    <text x="778" y="630"><tspan font-weight="600">Recommended Gear:</tspan> Medium armor, prioritize defense.</text>
+    <text x="778" y="648"><tspan font-weight="600">Strategy:</tspan> Survive opening 3-4 attacks, stabilize with</text>
+    <text x="778" y="666">healing, then commit consistent single-target damage.</text>
+  </g>
+</svg>

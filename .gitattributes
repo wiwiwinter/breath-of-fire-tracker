@@ -1,0 +1,19 @@
+# Export-Ignore Rules
+.gitignore export-ignore
+.gitattributes export-ignore
+.project export-ignore
+.classpath export-ignore
+.settings/ export-ignore
+.vscode/ export-ignore
+.idea/ export-ignore
+tests/ export-ignore
+
+# Line Endings Normalization
+* text=auto eol=lf
+*.html text
+*.css text
+*.js text
+*.md text
+*.svg text
+*.png binary
+*.jpg binary
